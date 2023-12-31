@@ -1,0 +1,21 @@
+.App {
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+div.parsonal_data {
+  display: flex;
+  border-top: 0.5px solid #d6d6d6;
+  margin: 30px;
+}
+
+.parsonal_data h3 {
+  margin: 10px;
+}
+
+.parsonal_data p {
+  margin: 5px;
+}
