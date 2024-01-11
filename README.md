@@ -3,7 +3,7 @@
 npm start
 ```
 
-github の資材を最新化する際は、以下を実行する
+github のページを最新化する際は、デプロイを実行する
 ```
-npm run build
+npm run deploy
 ```
