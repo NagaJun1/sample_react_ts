@@ -1,1 +1,1 @@
-export const JUMPEI_NAGAI: String = "jumpei nagai";
+export const APP_NAME: String = "APP_NAME";
