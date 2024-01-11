@@ -7,7 +7,7 @@ function App() {
   // 各ページのパス設定
   return <BrowserRouter>
     <Routes>
-      <Route path={'/'} element={<Home />} />
+      <Route path={'/sample_react_ts'} element={<Home />} />
     </Routes>
   </BrowserRouter>;
 }
