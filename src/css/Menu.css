@@ -1,0 +1,22 @@
+.unvisible {
+  display: none;
+}
+
+.visible {
+  padding-bottom: 5px;
+}
+
+.menus {
+  background-color: rgb(197, 229, 255);
+}
+
+.menu {
+  background-color: rgb(231, 242, 255);
+  padding: 5px;
+  margin: 5px;
+}
+
+.menuIcon {
+  min-width: 40px;
+  min-height: 40px;
+}
