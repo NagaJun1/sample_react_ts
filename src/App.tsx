@@ -8,7 +8,7 @@ import { Home } from './pages/Home';
 /** 初期ページ表示 */
 function App() {
   // 各ページのパス設定
-  return <BrowserRouter>
+  return <BrowserRouter basename={"/"}>
     <Routes>
       <Route path={'/sample_react_ts'} element={<Home />} />
       <Route path={'/sample_react_ts/author'} element={<Author />} />
