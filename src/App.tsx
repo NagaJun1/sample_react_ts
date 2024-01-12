@@ -8,7 +8,7 @@ import { Home } from './pages/Home';
 /** 初期ページ表示 */
 function App() {
   // 各ページのパス設定
-  return <BrowserRouter basename={"/"}>
+  return <BrowserRouter basename={process.env.PUBLIC_URL /* ← github pages にアップのデプロイ時は必要 */}>
     <Routes>
       <Route path={'/sample_react_ts'} element={<Home />} />
       <Route path={'/sample_react_ts/author'} element={<Author />} />
