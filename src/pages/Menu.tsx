@@ -14,21 +14,15 @@ export const Menus = () => {
   return <div className="menus">
     <img src={MenuIcon} alt="" className='menuIcon' onClick={changeMenuVisible} />
     <div className={unvisible ? 'unvisible' : 'visible'}>
-      <div className="menu" onClick={goToHomePage}> ホーム </div>
-      <div className="menu" onClick={goToReportPage}> 記事 </div>
-      <div className="menu" onClick={goToAuthorPage}> 筆者プロフィール </div>
+      <Link name="ホーム" link="/sample_react_ts" />
+      <Link name="記事" link="/sample_react_ts/report" />
+      <Link name="筆者プロフィール" link="/sample_react_ts/author" />
     </div>
   </div>;
 }
 
-const goToHomePage = () => {
-  window.location.href = '/sample_react_ts';
-};
-
-const goToReportPage = () => {
-  window.location.href = '/sample_react_ts/report';
-};
-
-const goToAuthorPage = () => {
-  window.location.href = '/sample_react_ts/author';
-};
+const Link = ({ name, link }: any) => {
+  return <div className="menu">
+    <a href={link}>{name}</a>
+  </div>
+}
