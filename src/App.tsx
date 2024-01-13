@@ -8,11 +8,14 @@ import { Home } from './pages/Home';
 /** 初期ページ表示 */
 function App() {
   // 各ページのパス設定
-  return <BrowserRouter basename={process.env.PUBLIC_URL /* ← github pages にアップのデプロイ時は必要 */}>
+  return <BrowserRouter>
     <Routes>
-      <Route path={'/sample_react_ts'} element={<Home />} />
-      <Route path={'/sample_react_ts/author'} element={<Author />} />
-      <Route path={'/sample_react_ts/report'} element={<Reports />} />
+      <Route path='/' element={<Home />} />
+      <Route path='/sample_react_ts' element={<Home />} />
+      <Route path='/author' element={<Author />} />
+      <Route path='/sample_react_ts/author' element={<Author />} />
+      <Route path='/report' element={<Reports />} />
+      <Route path='/sample_react_ts/report' element={<Reports />} />
     </Routes>
   </BrowserRouter>;
 }
