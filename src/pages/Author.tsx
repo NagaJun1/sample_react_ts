@@ -1,7 +1,7 @@
 import React from 'react';
-import { Menus } from './Menu';
+import Menus from './Menu';
 
-export const Author = () => {
+const Author = () => {
     return (<>
         <Menus />
         <h1> 筆者プロフィール </h1>
@@ -50,3 +50,5 @@ const Framework = () => {
         </p>
     </div>;
 }
+
+export default Author;

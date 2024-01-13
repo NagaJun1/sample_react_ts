@@ -1,6 +1,6 @@
-import { Menus } from "./Menu";
+import Menus from "./Menu";
 
-export const Home = () => {
+const Home = () => {
   return <>
     <Menus />
     <h1> このサイトについて </h1>
@@ -14,3 +14,5 @@ export const Home = () => {
     </div>
   </>
 }
+
+export default Home;

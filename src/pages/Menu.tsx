@@ -1,7 +1,7 @@
 import { useState } from "react";
-import MenuIcon from '../images/menu.svg';
+import menuIcon from '../images/menu.svg';
 
-export const Menus = () => {
+const Menus = () => {
 
   /** ポップアップメニューのクラス名制御（表示/非表示に使用）*/
   const [unvisible, setUnvisible] = useState(true);
@@ -12,7 +12,7 @@ export const Menus = () => {
   };
 
   return <div className="menus">
-    <img src={MenuIcon} alt="" className='menuIcon' onClick={changeMenuVisible} />
+    <img src={menuIcon} alt="Icon" className='menuIcon' onClick={changeMenuVisible} />
     <div className={unvisible ? 'unvisible' : 'visible'}>
       <Link name="ホーム" link="/sample_react_ts" />
       <Link name="記事" link="/sample_react_ts/report" />
@@ -26,3 +26,5 @@ const Link = ({ name, link }: any) => {
     <a href={link}>{name}</a>
   </div>
 }
+
+export default Menus;

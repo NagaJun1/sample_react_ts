@@ -1,7 +1,7 @@
-import { Menus } from "./Menu";
+import Menus from "./Menu";
 import '../css/Report.css';
 
-export const Reports = () => {
+const Reports = () => {
   return <>
     <Menus />
     <h1> 記事 </h1>
@@ -23,3 +23,5 @@ const goToQiita = () => {
 const goToGithub = () => {
   window.open('https://github.com/NagaJun1', '_blank');
 }
+
+export default Reports;
