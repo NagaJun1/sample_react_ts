@@ -24,6 +24,10 @@ div.parsonal_data {
   display: flex;
 }
 
+.margin0 {
+  margin: 0px;
+}
+
 .row {
   background-color: #f5f5f5;
   margin: 5px;

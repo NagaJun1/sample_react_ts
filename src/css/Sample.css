@@ -3,3 +3,12 @@
   margin: 10px;
   background-color: rgb(235, 247, 255);
 }
+
+iframe {
+  min-width: 100px;
+  margin-bottom: 50px;
+}
+
+input{
+  max-width: 100px;
+}
