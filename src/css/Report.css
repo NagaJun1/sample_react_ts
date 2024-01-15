@@ -1,13 +1,18 @@
-.qiita {
+.Qiita,
+.Github {
   padding: 10px;
-  background-color: #55C500;
-  color: white;
   margin: 5px;
 }
 
-.github {
-  padding: 10px;
-  background-color: black;
+.Qiita a,
+.Github a {
   color: white;
-  margin: 5px;
+}
+
+.Qiita {
+  background-color: #55C500;
+}
+
+.Github {
+  background-color: black;
 }

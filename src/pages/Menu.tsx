@@ -1,5 +1,6 @@
 import { useState } from "react";
 import menuIcon from '../images/menu.svg';
+import { APP_NAME } from "../const/string";
 
 const Menus = () => {
 
@@ -14,13 +15,14 @@ const Menus = () => {
   return <div className="menus">
     <img src={menuIcon} alt="Icon" className='menuIcon' onClick={changeMenuVisible} />
     <div className={unvisible ? 'unvisible' : 'visible'}>
-      <Link name="ホーム" link="/sample_react_ts" />
-      <Link name="記事" link="/sample_react_ts/report" />
-      <Link name="筆者プロフィール" link="/sample_react_ts/author" />
+      <Link name="ホーム" link={'/' + APP_NAME} />
+      <Link name="記事" link={'/' + APP_NAME + "/report"} />
+      <Link name="筆者プロフィール" link={'/' + APP_NAME + "/author"} />
     </div>
   </div>;
 }
 
+/** 「sample_react_ts」の他ページへのリンク作成 */
 const Link = ({ name, link }: any) => {
   return <div className="menu">
     <a href={link}>{name}</a>

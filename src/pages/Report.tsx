@@ -10,18 +10,16 @@ const Reports = () => {
 
       <h3> 外部ページリンク </h3>
       <div> 筆者が書いたページへのリンク </div>
-      <div className="qiita" onClick={goToQiita}> Qiita </div>
-      <div className="github" onClick={goToGithub}> Github </div>
+      <Link name="Qiita" link='https://qiita.com/NagaJun' />
+      <Link name="Github" link='https://github.com/NagaJun1' />
     </div>
   </>
 };
 
-const goToQiita = () => {
-  window.open('https://qiita.com/NagaJun', '_blank');
+const Link = ({ name, link }: any) => {
+  return <div className={name}>
+    <a href={link}> {name} </a>
+  </div>
 };
-
-const goToGithub = () => {
-  window.open('https://github.com/NagaJun1', '_blank');
-}
 
 export default Reports;
