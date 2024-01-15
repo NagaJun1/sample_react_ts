@@ -19,22 +19,22 @@ const linkList = () => {
   pageList.forEach((url: string, keyWord: string) => {
 
     // テキストボックスの値
-    const [inputText, setInputElement] = useState("300");
+    const [inputText, setInputElement] = useState("400");
 
     /**　テキストボックスの値に応じて、iframe の幅を修正 */
     let widthChangeEvent = (e: React.ChangeEvent<HTMLInputElement>) => {
       if (0 <= Number(e.target.value)) {
-        setInputElement(e.target.value)
+        setInputElement(e.target.value); // 入力値が、数値となる場合のみ、許容される
       }
     };
 
     list.push(<div key={keyWord}>
       <Link name={keyWord} link={url} />
       <div className="flex">
-        <p className="margin0"> 画面幅 (min: 100px)： </p>
+        <p className="margin0"> 画面高さ (100px～800px)： </p>
         <input type='text' placeholder='ページ幅' value={inputText} onChange={widthChangeEvent} />
       </div>
-      <br /><iframe src={url} title={keyWord} height={400} width={inputText} />
+      <iframe src={url} title={keyWord} height={inputText} />
     </div>);
   });
   return list;
