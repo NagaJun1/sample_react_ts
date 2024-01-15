@@ -1,6 +1,6 @@
 import { useState } from "react";
 import menuIcon from '../images/menu.svg';
-import { APP_NAME } from "../const/string";
+import { APP_NAME, PATH } from "../const/string";
 
 const Menus = () => {
 
@@ -17,6 +17,7 @@ const Menus = () => {
     <div className={unvisible ? 'unvisible' : 'visible'}>
       <Link name="ホーム" link={'/' + APP_NAME} />
       <Link name="記事" link={'/' + APP_NAME + "/report"} />
+      <Link name="サンプルコード・ページ" link={PATH.SAMPLE} />
       <Link name="筆者プロフィール" link={'/' + APP_NAME + "/author"} />
     </div>
   </div>;
