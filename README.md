@@ -1,3 +1,8 @@
+`Github Pages`で公開しているページ
+https://nagajun1.github.io/sample_react_ts/
+
+# 開発
+
 以下コマンドで、アプリ実行
 ```
 npm start
