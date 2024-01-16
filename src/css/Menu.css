@@ -19,6 +19,10 @@
 }
 
 .menus {
+  position:  fixed;
+  top: 0;
+  min-height: 40px;
+  width: 100%;
   background-color: rgb(197, 229, 255);
 }
 

@@ -1,10 +1,9 @@
 body {
-  background-color: rgb(197, 229, 255);
+  background-color: white;
 }
 
 #root {
-  background-color: white;
-  margin: 10px;
+  padding-top: 40px;
 }
 
 h1 {

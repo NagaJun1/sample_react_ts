@@ -43,14 +43,14 @@ const linkList = () => {
 /** key: リンク名, value: リンクURL  */
 const pageList: Map<string, string> = new Map<string, string>([
   [
+    "webix サンプル",
+    "https://nagajun1.github.io/webix_test/"
+  ], [
     "Amazon検索 金額指定 (以下、iframe 内では、検索できません)",
     "https://nagajun1.github.io/amazon_product_search/"
   ], [
     "draw 2d サンプル",
     "https://nagajun1.github.io/sample_draw2d/"
-  ], [
-    "webix サンプル",
-    "https://nagajun1.github.io/webix_test/"
   ]
 ]);
 
