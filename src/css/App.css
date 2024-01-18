@@ -23,6 +23,26 @@ div.parsonal_data {
   display: flex;
 }
 
+.margin-top10 {
+  margin-top: 10px;
+}
+
+.margin-top20 {
+  margin-top: 20px;
+}
+
+.margin-top30 {
+  margin-top: 30px;
+}
+
+.margin-top40 {
+  margin-top: 40px;
+}
+
+.margin10 {
+  margin: 10px;
+}
+
 .margin0 {
   margin: 0px;
 }

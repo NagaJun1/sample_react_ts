@@ -16,3 +16,20 @@
 .Github {
   background-color: black;
 }
+
+table {
+  border-collapse: collapse;
+}
+
+thead {
+  color: orange;
+  background-color: gray;
+}
+
+td {
+  border: solid 1px black;
+}
+
+td {
+  padding: 5px;
+}
