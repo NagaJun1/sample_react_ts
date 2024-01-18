@@ -1,58 +1,31 @@
 import { ReactNode } from "react";
 
-export const TrInTable = ({ td1, td2 }: any): ReactNode => <>{
-    <tr>
-        <td>{td1}</td>
-        <td>{td2}</td>
-    </tr>
-}</>;
+/**
+ * tr,td 要素を配列で生成
+ * @param values 要素に設定する値
+ * @returns {@link ReactNode}
+ */
+export const trInTable = (values: string[]): ReactNode => {
+  let tds: ReactNode[] = [];
 
-/** <tr>・<td> 要素を配列で生成 */
-export const trInTable = (values: Td[]): ReactNode => {
-    let tds: ReactNode[] = [];
+  values.forEach((val: string, index: number) => {
+    tds.push(<td key={index}>{val}</td>);
+  });
 
-    values.forEach((td: Td) => {
-        tds.push(td.getNode());
-    });
-
-    return <><tr>{tds}</tr></>;
+  return <tr>{tds}</tr>;
 };
 
-/** <td> 処理用クラス */
-export class Td {
-    /** 値 */
-    value: string;
+// overload する場合は、引数にパターンを持たせて、内部で分岐する様な書き方が必要
+// Java や C# だと、メソッド名が同じで引数違いなら、overload できるが、
+// typescript では、同じことはできない。
 
-    /** rowSpan */
-    rowspan: number;
+export const tdsInTr = (vals: ({ val: string, col?: number })[]): ReactNode => {
 
-    /** colSpan */
-    colspan: number;
+  let tds: ReactNode[] = [];
+  vals.forEach((data: ({ val: string, col?: number }), index: number) => {
+    tds.push(
+      <td key={index} colSpan={data.col !== undefined ? data.col : 1}>{data.val}</td>);
+  });
 
-    /**
-     * コンストラクタ
-     * @param val td の値
-     * @param row null -> 1 ：(オプション引数)
-     * @param col null -> 1 ：(オプション引数)
-     */
-    constructor(val: string, row?: number, col?: number) {
-        this.value = val;
-
-        if (row === undefined) {
-            row = 1;
-        }
-        this.rowspan = row;
-
-        if (col === undefined) {
-            col = 1;
-        }
-        this.colspan = col;
-    }
-
-    /** td: {@link ReactNode}  として取得 */
-    getNode(): ReactNode {
-        return (<td key={this.value} rowSpan={this.rowspan} colSpan={this.colspan}>
-            {this.value}
-        </td>);
-    }
+  return <tr>{tds}</tr>;
 }

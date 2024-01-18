@@ -1,4 +1,4 @@
-import { Td, trInTable } from "../../ts/utils";
+import { trInTable, tdsInTr } from "../../ts/utils";
 
 /** Ryzen8000G について */
 const Ryzen8000 = () => {
@@ -41,31 +41,31 @@ const Ryzen8000 = () => {
 };
 
 const GpuClock = () => <>{
-  trInTable([
-    new Td("GPUクロック"),
-    new Td("2900MHz"),
-    new Td("2800MHz", 1, 2),
-    new Td("2600MHz"),
+  tdsInTr([
+    { val: "GPUクロック" },
+    { val: "2900MHz" },
+    { val: "2800MHz", col: 2 },
+    { val: "2600MHz" },
   ])
-}</>
+}</>;
 
 /** GPU名 */
 const GpuName = () => <>{
-  trInTable([
-    new Td("GPU名"),
-    new Td("Radeon 780M"),
-    new Td("Radeon 760M"),
-    new Td("Radeon 740M", 1, 2),
+  tdsInTr([
+    { val: "GPU名" },
+    { val: "Radeon 780M" },
+    { val: "Radeon 760M" },
+    { val: "Radeon 740M", col: 2 },
   ])
 }</>;
 
 /** GPUコア数 */
 const GpuCore = () => <>{
-  trInTable([
-    new Td("GPUコア数"),
-    new Td("12"),
-    new Td("8"),
-    new Td("4", 1, 2),
+  tdsInTr([
+    { val: "GPUコア数" },
+    { val: "12" },
+    { val: "8" },
+    { val: "4", col: 2 },
   ])
 }</>;
 
@@ -73,49 +73,37 @@ const GpuCore = () => <>{
 const CpuModel = () => <>{
   //「<>{}</>」で囲まないと、「 is not a valid JSX element」エラーとなる
 
-  trInTable([
-    new Td("CPU型番"),
-    new Td("7 8700G"),
-    new Td("5 8600G"),
-    new Td("5 8500G"),
-    new Td("3 8300G"),
-  ])
+  trInTable(["CPU型番", "7 8700G", "5 8600G", "5 8500G", "3 8300G"])
 }</>;
 
 /** コア/スレッド数 */
 const CoreAndThread = () => <>{
-  trInTable([
-    new Td("コア/スレッド"),
-    new Td("8/16"),
-    new Td("6/12", 1, 2),
-    new Td("4/8")
+  tdsInTr([
+    { val: "コア/スレッド" },
+    { val: "8/16" },
+    { val: "6/12", col: 2 },
+    { val: "4/8" }
   ])
 }</>;
 
 const Clock = () => <>{
-  trInTable([
-    new Td("動作クロック"),
-    new Td("4.2GHz"),
-    new Td("4.3GHz"),
-    new Td("3.5GHz"),
-    new Td("3.4GHz")
-  ])
-}</>
+  trInTable(["動作クロック", "4.2GHz", "4.3GHz", "3.5GHz", "3.4GHz"])
+}</>;
 
 const L2Cache = () => <>{
-  trInTable([
-    new Td("L2 キャッシュ"),
-    new Td("8MB"),
-    new Td("6MB", 1, 2),
-    new Td("4MB")
+  tdsInTr([
+    { val: "L2 キャッシュ" },
+    { val: "8MB" },
+    { val: "6MB", col: 2 },
+    { val: "4MB" }
   ])
 }</>;
 
 const L3Cache = () => <>{
-  trInTable([
-    new Td("L3 キャッシュ"),
-    new Td("16MB", 1, 3),
-    new Td("8MB")
+  tdsInTr([
+    { val: "L3 キャッシュ" },
+    { val: "16MB", col: 3 },
+    { val: "8MB" }
   ])
 }</>;
 
