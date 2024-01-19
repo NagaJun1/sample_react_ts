@@ -1,5 +1,6 @@
 import { DvLenovoIdeaPadSlim } from "../ts/Dv";
 import Menus from "./Menu";
+import '../css/Home.css';
 
 const Home = () => {
   return <>
@@ -12,7 +13,7 @@ const Home = () => {
       <a href="https://github.com/NagaJun1/sample_react_ts">
         https://github.com/NagaJun1/sample_react_ts
       </a>
-      <div className="margin-top40">
+      <div className="fixed-bottom">
         <DvLenovoIdeaPadSlim />
       </div>
     </div>
