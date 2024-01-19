@@ -12,15 +12,27 @@ const Menus = () => {
     setUnvisible(!unvisible);
   };
 
-  return <div className="menus">
-    <img src={menuIcon} alt="Icon" className='menuIcon' onClick={changeMenuVisible} />
-    <div className={unvisible ? 'unvisible' : 'visible'}>
-      <Link name="ホーム" link={'/' + APP_NAME} />
-      <Link name="記事" link={'/' + APP_NAME + "/report"} />
-      <Link name="サンプルコード・ページ" link={PATH.SAMPLE} />
-      <Link name="筆者プロフィール" link={'/' + APP_NAME + "/author"} />
+  /** メニューを非表示化 */
+  const hiddenMenus = () => {
+    setUnvisible(true);
+  };
+
+  return <>
+    <div className="menu-button">
+      <img src={menuIcon} alt="Icon" className='menuIcon' onClick={changeMenuVisible} />
     </div>
-  </div>;
+    <div className={unvisible ? 'unvisible' : 'visible'}>
+      <div className="menus-container">
+        <div className="menus">
+          <Link name="ホーム" link={'/' + APP_NAME} />
+          <Link name="記事" link={'/' + APP_NAME + "/report"} />
+          <Link name="サンプルコード・ページ" link={PATH.SAMPLE} />
+          <Link name="筆者プロフィール" link={'/' + APP_NAME + "/author"} />
+        </div>
+        <div className="outside-of-frame" onClick={hiddenMenus} />
+      </div>
+    </div>
+  </>;
 }
 
 /** 「sample_react_ts」の他ページへのリンク作成 */
