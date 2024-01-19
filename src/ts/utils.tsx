@@ -9,7 +9,7 @@ export const trInTable = (values: string[]): ReactNode => {
   let tds: ReactNode[] = [];
 
   values.forEach((val: string, index: number) => {
-    tds.push(<td key={index}>{val}</td>);
+    tds.push(<td className="solid" key={index}>{val}</td>);
   });
 
   return <tr>{tds}</tr>;
@@ -24,7 +24,9 @@ export const tdsInTr = (vals: ({ val: string, col?: number })[]): ReactNode => {
   let tds: ReactNode[] = [];
   vals.forEach((data: ({ val: string, col?: number }), index: number) => {
     tds.push(
-      <td key={index} colSpan={data.col !== undefined ? data.col : 1}>{data.val}</td>);
+      <td className="solid" key={index} colSpan={data.col !== undefined ? data.col : 1}>
+        {data.val}
+      </td>);
   });
 
   return <tr>{tds}</tr>;

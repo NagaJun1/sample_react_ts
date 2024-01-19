@@ -1,3 +1,4 @@
+import { DvRyzen5500, DvRyzen7800X3D } from "../../ts/Dv";
 import { trInTable, tdsInTr } from "../../ts/utils";
 
 /** Ryzen8000G について */
@@ -6,7 +7,7 @@ const Ryzen8000 = () => {
     <div className="margin10"> 発売予定の Ryzen 8000G シリーズ性能 </div>
 
     {/* thead,tbody が無いとDEVツールで、エラー出力される */}
-    <table>
+    <table className="collapse">
       <thead>
         <CpuModel />
       </thead>
@@ -37,6 +38,8 @@ const Ryzen8000 = () => {
       </li>
       <li> AMDが発表している性能としては、Core i5 13400F + GTX1650 と同等か、それ以上の性能としている。 </li>
     </ul>
+    <DvRyzen7800X3D />
+    <DvRyzen5500 />
   </>
 };
 

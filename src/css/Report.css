@@ -17,7 +17,7 @@
   background-color: black;
 }
 
-table {
+table.collapse {
   border-collapse: collapse;
 }
 
@@ -26,7 +26,7 @@ thead {
   background-color: gray;
 }
 
-td {
+td.solid {
   border: solid 1px black;
 }
 

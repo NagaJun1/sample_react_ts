@@ -69,3 +69,7 @@ div.parsonal_data {
   max-width: 520px;
   margin: auto;
 }
+
+.rakuten-div img {
+  max-width: 180px;
+}
