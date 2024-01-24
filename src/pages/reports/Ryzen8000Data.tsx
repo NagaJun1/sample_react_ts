@@ -1,4 +1,3 @@
-import { DvRyzen5500, DvRyzen7800X3D } from "../../ts/Dv";
 import { trInTable, tdsInTr } from "../../ts/utils";
 
 /** Ryzen8000G について */
@@ -38,8 +37,6 @@ const Ryzen8000 = () => {
       </li>
       <li> AMDが発表している性能としては、Core i5 13400F + GTX1650 と同等か、それ以上の性能としている。 </li>
     </ul>
-    <DvRyzen7800X3D />
-    <DvRyzen5500 />
   </>
 };
 

@@ -6,7 +6,6 @@ import Reports from './pages/Report';
 import Home from './pages/Home';
 import { APP_NAME, PATH } from './const/string';
 import Samples from './pages/Sample';
-import { Test } from './pages/test/test';
 
 const App = () => {
   // 各ページのパス設定
@@ -16,7 +15,6 @@ const App = () => {
       <Route path={APP_NAME + '/author'} element={<Author />} />
       <Route path={APP_NAME + '/report'} element={<Reports />} />
       <Route path={PATH.SAMPLE} element={<Samples />} />
-      <Route path={PATH.TEST} element={<Test />} />
     </Routes>
   </BrowserRouter>;
 };
