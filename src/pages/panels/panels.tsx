@@ -22,8 +22,7 @@ const Panels = () => {
   return <>
     <SearchBox onSubmit={(text: string) => { setFilter(text) }} />
 
-    <div>コードURL：</div>
-    <div>コードURL</div>
+    <div>コードURL： https://github.com/NagaJun1/sample_react_ts/blob/main/src/pages/panels/panels.tsx</div>
 
     {/* 横並びで折り返し */}
     <div className="my-10 w-fit flex flex-wrap justify-center">
