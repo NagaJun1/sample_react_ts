@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/sample_react_ts/static/css/main.63af876e.css",
-    "main.js": "/sample_react_ts/static/js/main.3ee02f9f.js",
+    "main.css": "/sample_react_ts/static/css/main.2c12158d.css",
+    "main.js": "/sample_react_ts/static/js/main.167d2b85.js",
     "static/js/787.b99bb32d.chunk.js": "/sample_react_ts/static/js/787.b99bb32d.chunk.js",
     "index.html": "/sample_react_ts/index.html",
     "static/media/menu.svg": "/sample_react_ts/static/media/menu.9c6d87f304c822a7acb94967e5513f4a.svg",
-    "main.63af876e.css.map": "/sample_react_ts/static/css/main.63af876e.css.map",
-    "main.3ee02f9f.js.map": "/sample_react_ts/static/js/main.3ee02f9f.js.map",
+    "main.2c12158d.css.map": "/sample_react_ts/static/css/main.2c12158d.css.map",
+    "main.167d2b85.js.map": "/sample_react_ts/static/js/main.167d2b85.js.map",
     "787.b99bb32d.chunk.js.map": "/sample_react_ts/static/js/787.b99bb32d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.63af876e.css",
-    "static/js/main.3ee02f9f.js"
+    "static/css/main.2c12158d.css",
+    "static/js/main.167d2b85.js"
   ]
 }
