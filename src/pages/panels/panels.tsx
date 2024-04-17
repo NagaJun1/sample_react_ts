@@ -1,8 +1,19 @@
 import React from "react";
 import { samplePanelData } from ".";
 import { PanelData } from "./type";
+import { Header } from "../../components/header";
 
 const Panels = () => {
+
+  return <div className="">
+    <div className="sticky top-0 ">
+      <Header />
+    </div>
+    <Body />
+  </div>;
+}
+
+const Body = () => {
 
   // 絞り込み条件
   const [filter, setFilter] = React.useState('');
@@ -57,7 +68,7 @@ type SearchBoxProps = {
 const SearchBox = ({ onSubmit }: SearchBoxProps) => {
   const [text, setText] = React.useState('');
 
-  return <div className='flex'>
+  return <div className='flex mt-6'>
     <input
       type='text'
       value={text}
