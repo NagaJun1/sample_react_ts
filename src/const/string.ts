@@ -1,6 +1,7 @@
-export const APP_NAME: String = "sample_react_ts";
+export const APP_NAME = "sample_react_ts";
 
-export const PATH = {
-  TEST: '/' + APP_NAME + '/test',
-  SAMPLE: '/' + APP_NAME + '/sample'
+export enum PATH {
+  TEST = "test",
+  SAMPLE = "sample",
+  DRAWER = "drawer"
 };
