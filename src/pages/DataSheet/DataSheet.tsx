@@ -1,7 +1,7 @@
 import React from "react";
 import { AgGridReact } from "ag-grid-react";
 import {
-    ColDef, ClientSideRowModelModule, ModuleRegistry, TextEditorModule,
+    type ColDef, ClientSideRowModelModule, ModuleRegistry, TextEditorModule,
     NumberEditorModule, ValidationModule, DateEditorModule, RowSelectionModule,
     SelectEditorModule, RowStyleModule,
 } from "ag-grid-community";
@@ -55,8 +55,8 @@ export const DataSheet = () => {
                     選択中：{selectedIds.join(',')}
                 </div>
                 <div className="m-2 px-3 rounded w-fit bg-sky-100">
-                    {newValueList.map((x, index) => (
-                        <div key={index} className="flex">
+                    {newValueList.map((x) => (
+                        <div key={x.id} className="flex">
                             <div className="w-20">ID：{x.id}</div>
                             <div className="w-[200px]">フィールド：{x.field}</div>
                             <div className="pr-2">変更後の値：{String(x.newValue ?? '')}</div>

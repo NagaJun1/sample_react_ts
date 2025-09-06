@@ -9,6 +9,7 @@ import Samples from "./pages/Sample";
 import Panels from "./pages/panels/panels";
 import { DataSheet } from "./pages/DataSheet/DataSheet";
 import { DrawerPage } from "./pages/sample/DrawerPage";
+import { MapPage } from "./pages/PolygonMap/MapPage";
 
 const App = () => {
   const routeList = [
@@ -19,6 +20,7 @@ const App = () => {
     { path: `${PATH.SAMPLE}/${PATH.DRAWER}`, element: <DrawerPage /> },
     { path: "panels", element: <Panels /> },
     { path: "datasheet", element: <DataSheet /> },
+    { path: "map", element: <MapPage /> },
   ]
 
   // 各ページのパス設定
