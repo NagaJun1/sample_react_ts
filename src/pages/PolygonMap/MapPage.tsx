@@ -4,31 +4,18 @@ import { MapViewer } from "./MapViewer";
 import { useEffect, useState } from "react";
 
 export function MapPage() {
-	const [polygons, setPolygons] = useState<GeoJSON.Feature<GeoJSON.Polygon>[]>([
+	const [features, setFeatures] = useState<GeoJSON.Feature<GeoJSON.Polygon>[]>([
 		JSON.parse(polygon1),
 	]);
 
 	useEffect(() => {
 		// テスト動確
-		console.log("polygons updated:", polygons);
-	}, [polygons]);
+		console.log("polygons updated:", features);
+	}, [features]);
 
 	return (
 		<div className="m-6 w-[1000px] h-[600px]">
-			<MapViewer
-				polygons={polygons}
-				eventHandle={(newPolygons, action) => {
-					if (action === "add") {
-						setPolygons((pre) => [...pre, ...newPolygons]);
-					} else if (action === "update") {
-						setPolygons((pre) =>
-							pre.map((p) => (p.id === newPolygons[0].id ? newPolygons[0] : p)),
-						);
-					} else if (action === "delete") {
-						setPolygons((pre) => pre.filter((p) => p.id !== newPolygons[0].id));
-					}
-				}}
-			/>
+			<MapViewer features={features} setFeatures={setFeatures} />
 		</div>
 	);
 }
