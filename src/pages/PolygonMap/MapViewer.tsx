@@ -62,7 +62,7 @@ export const MapViewer = (props: {
 				latitude: centerLat,
 				zoom: 12,
 			}}
-			mapStyle="https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json"
+			mapStyle="https://tile.openstreetmap.jp/styles/osm-bright-ja/style.json"
 			style={{ width: "100%", height: "500px" }}
 			onLoad={() => onMapLoad({ mapRef, features, eventHandle: setAction })}
 		>
