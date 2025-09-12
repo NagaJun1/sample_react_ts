@@ -8,6 +8,7 @@ import {
 import "@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw.css";
 import { type MutableRefObject, useEffect, useRef, useState } from "react";
 import MapboxDraw from "@mapbox/mapbox-gl-draw";
+import { MapSearchBox } from "./MapSearchBox";
 
 type MapActionData = {
 	features: GeoJSON.Feature<GeoJSON.Polygon>[];
@@ -55,32 +56,35 @@ export const MapViewer = (props: {
 	const centerLat = calcCenter(allLat, 35.6895);
 
 	return (
-		<MapLibre
-			ref={mapRef}
-			initialViewState={{
-				longitude: centerLng,
-				latitude: centerLat,
-				zoom: 12,
-			}}
-			mapStyle="https://tile.openstreetmap.jp/styles/osm-bright-ja/style.json"
-			style={{ width: "100%", height: "500px" }}
-			onLoad={() => onMapLoad({ mapRef, features, eventHandle: setAction })}
-		>
-			<Source
-				id="polygon"
-				type="geojson"
-				data={{ type: "FeatureCollection", features }}
-			/>
-			<Layer
-				id="polygon-layer"
-				type="fill"
-				source="polygon"
-				paint={{
-					"fill-color": "#ff0000", // ポリゴンの色（例: 赤）
-					"fill-opacity": 0.5,
+		<div className="grid gap-4">
+			<MapSearchBox setCenter={(center) => { mapRef.current?.flyTo({ center, zoom: 12 }) }} />
+			<MapLibre
+				ref={mapRef}
+				initialViewState={{
+					longitude: centerLng,
+					latitude: centerLat,
+					zoom: 12,
 				}}
-			/>
-		</MapLibre>
+				mapStyle="https://tile.openstreetmap.jp/styles/osm-bright-ja/style.json"
+				style={{ width: "100%", height: "500px" }}
+				onLoad={() => onMapLoad({ mapRef, features, eventHandle: setAction })}
+			>
+				<Source
+					id="polygon"
+					type="geojson"
+					data={{ type: "FeatureCollection", features }}
+				/>
+				<Layer
+					id="polygon-layer"
+					type="fill"
+					source="polygon"
+					paint={{
+						"fill-color": "#ff0000", // ポリゴンの色（例: 赤）
+						"fill-opacity": 0.5,
+					}}
+				/>
+			</MapLibre>
+		</div>
 	);
 };
 
