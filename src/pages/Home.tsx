@@ -1,19 +1,17 @@
-import Menus from "./Menu";
-import '../css/Home.css';
-
 const Home = () => {
-  return <>
-    <Menus />
-    <h1> このサイトについて </h1>
-    <div className="honbun">
-      このサイトは、筆者の React の自己学習のために作成されています。 <br /><br />
-      左上のメニューから、他ページへ遷移できます。<br /><br />
-      このページのソースコードは、以下のリンクで公開しています。<br />
-      <a href="https://github.com/NagaJun1/sample_react_ts">
-        https://github.com/NagaJun1/sample_react_ts
-      </a>
-    </div>
-  </>
+  return (
+    <>
+      <h1 className="mt-20 text-2xl"> サイト概要 </h1>
+      <div className="honbun">
+        React + TypeScriptで作成した、サンプルアプリケーションです。<br /><br />
+        左上のメニューから、他ページへ遷移できます。<br /><br />
+        このページのソースコードは、以下のリンクで公開しています。<br />
+        <a href="https://github.com/NagaJun1/sample_react_ts">
+          https://github.com/NagaJun1/sample_react_ts
+        </a>
+      </div>
+    </>
+  );
 }
 
 export default Home;

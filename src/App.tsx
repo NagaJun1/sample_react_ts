@@ -1,8 +1,5 @@
 import "./css/App.css";
-import "./css/Menu.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Author from "./pages/Author";
-import Reports from "./pages/Report";
 import Home from "./pages/Home";
 import { APP_NAME, PATH } from "./const/string";
 import Samples from "./pages/Sample";
@@ -10,26 +7,33 @@ import Panels from "./pages/panels/panels";
 import { DataSheet } from "./pages/DataSheet/DataSheet";
 import { DrawerPage } from "./pages/sample/DrawerPage";
 import { MapPage } from "./pages/PolygonMap/MapPage";
+import { Layout } from "./Layout";
+
+type RouteData = {
+  path: string;
+  element: JSX.Element;
+  name: string;
+}
+
+export const routeList: RouteData[] = [
+  { path: "*", element: <Home />, name: "ホーム" },
+  { path: PATH.SAMPLE, element: <Samples />, name: "サンプルコード・ページ" },
+  { path: `${PATH.SAMPLE}/${PATH.DRAWER}`, element: <DrawerPage />, name: "ドロワーページ" },
+  { path: "panels", element: <Panels />, name: "パネル" },
+  { path: "datasheet", element: <DataSheet />, name: "データシート" },
+  { path: "map", element: <MapPage />, name: "マップ" },
+]
 
 const App = () => {
-  const routeList = [
-    { path: "*", element: <Home />, },
-    { path: "author", element: <Author /> },
-    { path: "report", element: <Reports /> },
-    { path: PATH.SAMPLE, element: <Samples /> },
-    { path: `${PATH.SAMPLE}/${PATH.DRAWER}`, element: <DrawerPage /> },
-    { path: "panels", element: <Panels /> },
-    { path: "datasheet", element: <DataSheet /> },
-    { path: "map", element: <MapPage /> },
-  ]
-
   // 各ページのパス設定
   return (
     <BrowserRouter>
       <Routes>
-        {routeList.map(x => (
-          <Route path={`${APP_NAME}/${x.path}`} element={x.element} key={x.path} />
-        ))}
+        <Route path={'/'} element={<Layout />}>
+          {routeList.map(x => (
+            <Route path={`/${APP_NAME}/${x.path}`} element={x.element} key={x.path} />
+          ))}
+        </Route>
       </Routes>
     </BrowserRouter>
   );
